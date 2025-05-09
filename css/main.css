@@ -2947,7 +2947,7 @@ body.modal-open {
 
 .s-testimonials {
     background-color: transparent;
-    background-image: url("/MikeOzDesigns/images/Testimonials/testimonial-background-gray.jpg");  
+    background-image: url("../images/Testimonials/testimonial-background-gray.png");  
     background-size: 100%, 100%;
     background-position: center, center;
     padding-top: 9.6rem;
@@ -3372,7 +3372,7 @@ body.modal-open {
 
  .s-contact {
     background-color: #151515;
-    background-image: url("../images/At Window Morning (REV C).jpeg");
+    background-image: url("../images/At Window Morning (REV C).png");
     background-repeat: no-repeat;
     background-position: 50% 25%;
     max-width: 100%;

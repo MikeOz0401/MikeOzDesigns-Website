@@ -2947,7 +2947,7 @@ body.modal-open {
 
 .s-testimonials {
     background-color: transparent;
-    background-image: url('images/Testimonials/testimonial-background-gray.jpg');
+    background-image: url('../images/Testimonials/testimonial-background-gray.png');
     background-size: 100%, 100%;
     background-position: center, center;
     padding-top: 9.6rem;

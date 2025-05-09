@@ -338,53 +338,39 @@
      * ------------------------------------------------------ */
     var ssContactForm = function() {
 
-        /* local validation */
-	    $('#contactForm').validate({
-        
-            /* submit via ajax */
-            submitHandler: function(form) {
-    
-                var sLoader = $('.submit-loader');
-    
-                $.ajax({
-    
-                    type: "POST",
-                    url: "inc/sendEmail.php",
-                    data: $(form).serialize(),
-                    beforeSend: function() { 
-    
-                        sLoader.slideDown("slow");
-    
-                    },
-                    success: function(msg) {
-    
-                        // Message was sent
-                        if (msg == 'OK') {
-                            sLoader.slideUp("slow"); 
-                            $('.message-warning').fadeOut();
-                            $('#contactForm').fadeOut();
-                            $('.message-success').fadeIn();
-                        }
-                        // There was an error
-                        else {
-                            sLoader.slideUp("slow"); 
-                            $('.message-warning').html(msg);
-                            $('.message-warning').slideDown("slow");
-                        }
-    
-                    },
-                    error: function() {
-    
-                        sLoader.slideUp("slow"); 
-                        $('.message-warning').html("Something went wrong. Please try again.");
-                        $('.message-warning').slideDown("slow");
-    
+        /* Contact Form  ------------------------------------------*/
+        $('#contactForm').on('submit', function (e) {
+
+            e.preventDefault();                       // stop normal form submit
+            var $form    = $(this);
+            var sLoader  = $('.submit-loader');
+
+            $.ajax({
+                type:        'POST',
+                url:         'https://formspree.io/f/xdkgdgen',   // ← your endpoint
+                data:        $form.serialize(),
+                dataType:    'json',                              // tells jQuery to expect JSON
+                headers:     { 'Accept': 'application/json' },    // tells Formspree to send JSON
+                beforeSend:  function () {
+                    sLoader.slideDown('slow');
+                },
+                success:     function (data) {
+                    sLoader.slideUp('slow');
+                    $('.message-warning').fadeOut();
+                    $form.fadeOut();
+                    $('.message-success').fadeIn();               // ✔ show success box
+                },
+                error:       function (xhr) {
+                    sLoader.slideUp('slow');
+                    let errMsg = 'Something went wrong. Please try again.';
+                    if (xhr.responseJSON && xhr.responseJSON.errors) {
+                        errMsg = xhr.responseJSON.errors.map(e => e.message).join('<br>');
                     }
-    
-                });
-            }
-    
+                    $('.message-warning').html(errMsg).slideDown('slow');
+                }
+            });
         });
+
     };
 
 

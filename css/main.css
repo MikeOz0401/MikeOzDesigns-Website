@@ -2947,7 +2947,7 @@ body.modal-open {
 
 .s-testimonials {
     background-color: transparent;
-    background-image: url('../images/Testimonials/testimonial-background-gray.png');
+    background-image: url("/MikeOzDesigns/images/Testimonials/testimonial-background-gray.jpg");  
     background-size: 100%, 100%;
     background-position: center, center;
     padding-top: 9.6rem;
@@ -3372,7 +3372,7 @@ body.modal-open {
 
  .s-contact {
     background-color: #151515;
-    background-image: url("../images/At Window Morning (REV C).png");
+    background-image: url("../images/At Window Morning (REV C).jpeg");
     background-repeat: no-repeat;
     background-position: 50% 25%;
     max-width: 100%;
@@ -3488,14 +3488,42 @@ body.modal-open {
 }
 
 .message-warning, .message-success {
-    display: none;
     background: #0D0A0B;
     font-size: 1.5rem;
-    line-height: 2;
+    line-height: 5;
+    text-align: center;
     padding: 3rem;
     margin-bottom: 3.6rem;
     width: 100%;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+/* icon */
+.msg-icon {
+    width: 20%;            /* or 64px, etc. */
+    height: auto;
+    margin-top: 0.75rem; /* gap under the icon */
+    margin-left: 40%;
+    margin-bottom: 0.75rem; /* gap under the icon */
+    opacity: 0.9;           /* slightly translucent */
+    pointer-events: none;   /* icon won’t catch clicks */
+    user-select: none;
+}
+
+/* extra filter that flips black → white (and any other colours opposite) */
+.icon-white {
+    /*   black (0%)  → white (100%)
+         white (100%) → black (0%)  */
+    filter: invert(1);
+
+    /* optional: pump it a little brighter so #888 greys also go whiteish */
+    filter: invert(1) brightness(1.4);
+}
+
 
 .message-warning {
     color: #ff6163;

@@ -2809,7 +2809,7 @@ body.modal-open {
 :root {
     --icon-diameter: 360px;   /* desktop circle */
     --icon-top-margin: 5rem;
-    --arrow-gap: 4rem;
+    --arrow-gap: 5%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -2818,7 +2818,7 @@ body.modal-open {
     :root {
         --icon-diameter: 200px;   /* this number already matches your old code */
         --icon-top-margin: 2rem;  /* drop the circle a little less */
-        --arrow-gap: 3rem;        /* pull the arrows closer */
+        --arrow-gap: 5%;        /* pull the arrows closer */
     }
 
     /* ②  keep your existing overrides, but let them reference the same size */

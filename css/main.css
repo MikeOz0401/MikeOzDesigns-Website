@@ -1514,7 +1514,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     position: absolute;
     margin: 0;
     padding: 0;
-    left: 50px;
+    left: 2.5rem;
     top: 40%;
     scale: 80%;
     -webkit-transform: translateY(-50%);

@@ -1542,10 +1542,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .header-menu-toggle {
     display: none;
     position: absolute;
-    right: 29px;
+    right: 0%;
     top: 18px;
-    height: 42px;
-    width: 42px;
+    height: 75%;
+    width: 60px;
     line-height: 42px;
     font-family: "montserrat-regular", sans-serif;
     font-size: 1.4rem;
@@ -1634,7 +1634,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .header-nav-wrap {
     font-family: "montserrat-bold", sans-serif;
-    font-size: 11px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: .25rem;
     position: absolute;
@@ -2627,8 +2627,8 @@ body.modal-open {
     color: #89CFF0; /* Use your theme's blue colour */
     position: absolute;
     right: 2rem;
-    top: 1rem;
-    font-size: 3rem;
+    top: 0rem;
+    font-size: 5rem;
     font-weight: bold;
     cursor: pointer;
     z-index: 1001;
@@ -2679,13 +2679,21 @@ body.modal-open {
 /* Adjust modal content on smaller screens */
 @media only screen and (max-width: 800px) {
     .modal-content {
-        width: 95%;
-        max-width: none;
+        max-width: 90%;
     }
+
     .modal .close {
-        font-size: 2.5rem;
-        right: 1rem;
-        top: 0.5rem;
+        font-size: 5rem;
+        right: 2.5rem;
+        top: -1rem;
+    }
+
+    .modal-content h2 {
+        font-size: 2.5rem
+    }
+
+    .modal-content p {
+        font-size: 1.5rem;
     }
 }
 
@@ -2753,15 +2761,22 @@ body.modal-open {
 
 .service-navigation {
     position: absolute;
-    top: 50%;
-    width: 100%;
+    top: 0;                        /* stay at the very top of carousel    */
+    left: 50%;                     /* centre the container horizontally   */
+    width: calc(var(--icon-diameter) + 10 * var(--arrow-gap));                  /* = icon (360) + two gaps (2×120)     */
+    transform: translate(-50%,calc(var(--icon-top-margin) + var(--icon-diameter) / 2.5)); /* 17.5 rem = icon's margin-top (5 rem was too little)         */
     display: flex;
     justify-content: space-between;
-    transform: translateY(-150%);
+    align-items: center;
+    pointer-events: none;          /* allow clicks only on arrows         */
+}
+
+.service-navigation .nav-arrow {
+    pointer-events: auto;
 }
 
 .nav-arrow {
-    font-size: 4rem; /* Scaled up from 2rem */
+    font-size: 5rem; /* Scaled up from 2rem */
     color: #89CFF0;
     cursor: pointer;
     user-select: none;
@@ -2784,27 +2799,34 @@ body.modal-open {
     max-width: 1000px; /* Scaled up from 500px */
     margin: 0 auto;
     padding: 5rem;
-    margin-bottom: 5rem;
+}
+
+:root {
+    --icon-diameter: 360px;   /* desktop circle */
+    --icon-top-margin: 5rem;
+    --arrow-gap: 4rem;
 }
 
 @media only screen and (max-width: 600px) {
+
+    /* ①  update the three variables */
+    :root {
+        --icon-diameter: 200px;   /* this number already matches your old code */
+        --icon-top-margin: 2rem;  /* drop the circle a little less */
+        --arrow-gap: 3rem;        /* pull the arrows closer */
+    }
+
+    /* ②  keep your existing overrides, but let them reference the same size */
     .service-icon {
-        width: 200px; /* Adjust as needed */
-        height: 200px;
+        width:  var(--icon-diameter);
+        height: var(--icon-diameter);
     }
 
-    .service-title {
-        font-size: 3.5rem;
-    }
-
-    .nav-arrow {
-        font-size: 3rem;
-    }
-
-    .service-description {
-        font-size: 1.75rem;
-    }
+    .service-title       { font-size: 3rem; }
+    .nav-arrow           { font-size: 5rem;   }
+    .service-description { font-size: 1.75rem;}
 }
+
 
 
 /* My Promise Section Styles
@@ -2833,7 +2855,7 @@ body.modal-open {
 
 .promise-item {
     flex: 1 1 10%;
-    margin: 0 1rem;
+    margin: 0 1 rem;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -2846,7 +2868,7 @@ body.modal-open {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem auto;
+    margin: 0 auto 3rem auto;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -2947,12 +2969,11 @@ body.modal-open {
 
 .s-testimonials {
     background-color: transparent;
-    background-image: url("../images/Testimonials/testimonial-background-gray.png");  
     background-size: 100%, 100%;
     background-position: center, center;
     padding-top: 9.6rem;
     padding-bottom: 10.4rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.4);
     position: relative;
 }
 
@@ -3013,7 +3034,7 @@ body.modal-open {
     font-size: 1.2rem;
     height: 4.5rem;
     width: 4.5rem;
-    line-height: 4.5rem;
+    line-height: 4.8rem;
     text-align: center;
 }
 
@@ -3372,7 +3393,7 @@ body.modal-open {
 
  .s-contact {
     background-color: #151515;
-    background-image: url("../images/At Window Morning (REV C).png");
+    background-image: url("../images/BathroomShot_Contact.png");
     background-repeat: no-repeat;
     background-position: 50% 25%;
     max-width: 100%;
@@ -3567,6 +3588,17 @@ body.modal-open {
 .oldie .submit-loader .text-loader {
     display: block;
 }
+
+@media only screen and (max-width: 800px) {
+    .s-contact{
+
+        background-size: cover;
+    }
+
+
+
+}
+
 
 
 /* --------------------------------------------------------------- 

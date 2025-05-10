@@ -250,7 +250,7 @@
 
             },
 
-            offset: '25%'
+            offset: '5%'
 
         });
         
@@ -484,6 +484,8 @@
     });
     };
 
+
+    
     /* Coffee Counter Functionality
      * ------------------------------------------------------ */
     var ssCoffeeCounter = function() {

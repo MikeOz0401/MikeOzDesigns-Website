@@ -1673,7 +1673,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 @media only screen and (max-width: 800px) {
     .header-logo {
-        left: 40px;
+        left: 1.5rem;
     }
     .header-nav-wrap {
         display: none;

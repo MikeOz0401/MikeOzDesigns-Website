@@ -2592,6 +2592,8 @@ html.no-csstransitions .home-content__main {
     opacity: 0; /* Hidden by default */
     pointer-events: none; /* Disable interactions when hidden */
     transition: opacity 0.5s ease; /* Transition opacity only */
+    overscroll-behavior: contain;
+    touch-action: manipulation;   /* drop 300 ms dbl-tap delay */
 }
 
 /* Show modal when .is-visible is added */
@@ -2643,26 +2645,22 @@ body.modal-open {
     text-decoration: none;
 }
 
-/* Center images inside modal
-.modal-content img {
-    display: block;
-    align-items: center;
-    margin: 0 auto 1.5rem auto;
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-} */
-
 /* Center images inside Before/After section */
 .modal-content img {
     display: block;
     align-items: center;
-    /* margin: 0 auto 1.5rem auto;
-    max-width: 100%;
-    height: auto; */
     border: 1px solid #ccc;
-    /* border-radius: 20px; */
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    
+}
+
+/* Cheap image safeguards */
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 
@@ -2674,6 +2672,13 @@ body.modal-open {
 .modal-content p {
     color: #333;
     line-height: 1.6;
+}
+
+/* Don’t promote body to a fixed layer when you lock scrolling */
+html.modal-open,
+body.modal-open {
+    overflow: hidden;
+    position: relative;        /* prevents WebKit layer promotion */
 }
 
 /* Adjust modal content on smaller screens */

@@ -53,6 +53,7 @@
  * =================================================================== */
 
 
+
 /* ===================================================================
  * # webfonts and iconfonts - (_document-setup.scss)
  *
@@ -1514,7 +1515,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     position: absolute;
     margin: 0;
     padding: 0;
-    left: 2.5rem;
+    left: 2%;
     top: 40%;
     scale: 80%;
     -webkit-transform: translateY(-50%);
@@ -1673,7 +1674,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 @media only screen and (max-width: 800px) {
     .header-logo {
-        left: 1.5rem;
+        left: 2%;
     }
     .header-nav-wrap {
         display: none;
@@ -3514,8 +3515,9 @@ body.modal-open {
 }
 
 .message-warning, .message-success {
-    background: #0D0A0B;
-    font-size: 1.5rem;
+    background: transparent;
+    font-weight: bold;
+    font-size: 1.75rem;
     line-height: 5;
     text-align: center;
     padding: 3rem;

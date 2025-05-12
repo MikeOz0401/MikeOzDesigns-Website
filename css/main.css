@@ -2585,9 +2585,8 @@
  */
  .modal {
      display: flex;
-     overflow: hidden;
-  
      position: fixed;
+
      z-index: 1000;
      top: 0;
      left: 0;
@@ -2601,17 +2600,16 @@
      opacity: 0; /* Hidden by default */
      pointer-events: none; /* Disable interactions when hidden */
      transition: opacity 0.5s ease; /* Transition opacity only */
+
      overscroll-behavior: contain;
      touch-action: manipulation;   /* drop 300 ms dbl-tap delay */
  }
  
  /* Show modal when .is-visible is added */
  .modal.is-visible {
-     display: flex;
      opacity: 1;
      pointer-events: auto; /* Enable interactions when visible */
  }
- 
  
  /* Prevent background scrolling when modal is open */
  body.modal-open {
@@ -2620,9 +2618,6 @@
  
  /* Modal content */
  .modal-content {
-     max-height: 90vh;
-     overflow-y: auto;
-   
      box-sizing: border-box;
      background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
      padding: 2rem;
@@ -2680,6 +2675,7 @@
  .modal-content h2 {
      color: #89CFF0;
      margin-top: 0;
+     padding-right: 2.5rem;
  }
  
  .modal-content p {
@@ -2696,8 +2692,15 @@
  
  /* Adjust modal content on smaller screens */
  @media only screen and (max-width: 800px) {
+    .modal {
+        contain: strict;
+    }
+
      .modal-content {
+         width: 90%;
          max-width: 90%;
+         max-height: 90%;
+         overflow-y: auto;
      }
  
      .modal .close {
@@ -2707,11 +2710,13 @@
      }
  
      .modal-content h2 {
-         font-size: 2.5rem
+         font-size: 2.25rem;
+         padding-right: 2.5rem;
+         
      }
  
      .modal-content p {
-         font-size: 1.5rem;
+         font-size: 1.25rem;
      }
  }
  

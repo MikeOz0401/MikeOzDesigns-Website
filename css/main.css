@@ -2219,8 +2219,8 @@
  }
  
  .about-selfie {
-     width: 60%;
-     height: 60%;
+     width: 75%;
+     height: 75%;
      display: inline-block;
      overflow: hidden;
      box-shadow: 0 5px 15px #000000;
@@ -2236,6 +2236,17 @@
      position: relative;
  }
  
+ 
+ @media only screen and (max-width: 800px) {
+.about-selfie{
+    width: 90% ;
+    height: 90%;
+
+}
+
+
+ }
+
  
  /* ------------------------------------------------------------------- 
   * ## timeline - (_site-layout.scss) 
@@ -2653,22 +2664,14 @@
      text-decoration: none;
  }
  
- /* Center images inside Before/After section */
- .modal-content img {
-     display: block;
-     align-items: center;
-     border: 1px solid #ccc;
-     max-width: 100%;
-     height: auto;
-     object-fit: contain;
-     
- }
  
  /* Cheap image safeguards */
  .modal-content img {
-     max-width: 100%;
-     height: auto;
-     object-fit: contain;
+    align-items: center;
+    border: 1px solid #a4a4a4;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
  }
  
  
@@ -2845,7 +2848,10 @@
          height: var(--icon-diameter);
      }
  
-     .service-title       { font-size: 3rem; }
+     .service-title       { 
+        font-size: 3rem;
+        padding: 5%; 
+    }
      .nav-arrow           { font-size: 5rem;   }
      .service-description { font-size: 1.75rem;}
  }

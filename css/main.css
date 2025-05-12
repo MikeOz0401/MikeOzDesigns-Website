@@ -2585,6 +2585,8 @@
  */
  .modal {
      display: flex;
+     overflow: hidden;
+  
      position: fixed;
      z-index: 1000;
      top: 0;
@@ -2605,6 +2607,7 @@
  
  /* Show modal when .is-visible is added */
  .modal.is-visible {
+     display: flex;
      opacity: 1;
      pointer-events: auto; /* Enable interactions when visible */
  }
@@ -2617,6 +2620,9 @@
  
  /* Modal content */
  .modal-content {
+     max-height: 90vh;
+     overflow-y: auto;
+   
      box-sizing: border-box;
      background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
      padding: 2rem;

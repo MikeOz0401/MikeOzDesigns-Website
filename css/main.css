@@ -2833,7 +2833,9 @@
      color: #555555;
      max-width: 1000px; /* Scaled up from 500px */
      margin: 0 auto;
-     padding: 5rem;
+     padding-top: 2.5rem;
+     padding-inline: 5rem;
+     padding-bottom: 5rem;
  }
  
  :root {
@@ -2862,7 +2864,7 @@
         padding: 5%; 
     }
      .nav-arrow           { font-size: 5rem;   }
-     .service-description { font-size: 1.75rem;}
+     .service-description { font-size: 1.5rem;}
  }
  
  

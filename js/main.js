@@ -130,16 +130,78 @@
 
 
     /* Masonry
-     * ---------------------------------------------------- */ 
+     * ---------------------------------------------------- */
     var ssMasonryFolio = function () {
 
         var containerBricks = $('.masonry');
+        var $masonryInstance;
+
+        // Checkerboard pattern for a 4-column grid:
+        // square | portrait | square | portrait
+        // portrait | square | portrait | square
+        var getExpectedShape = function (index) {
+            var col = index % 4;
+            var row = Math.floor(index / 4);
+            var isSquare = (col % 2 === 0) ? (row % 2 === 0) : (row % 2 !== 0);
+            return isSquare ? 'square' : 'portrait';
+        };
+
+        var getDetectedShape = function (width, height) {
+            if (!width || !height) {
+                return null;
+            }
+
+            var ratio = width / height;
+
+            if (ratio > 1.08) {
+                return 'landscape';
+            }
+
+            if (ratio < 0.92) {
+                return 'portrait';
+            }
+
+            return 'square';
+        };
+
+        var applyPortfolioShapeSlots = function () {
+            containerBricks.find('.masonry__brick').each(function (index) {
+                var $brick = $(this);
+                var $img = $brick.find('.item-folio__thumb img').first();
+                var expectedShape = getExpectedShape(index);
+                var detectedShape = getDetectedShape($img[0].naturalWidth, $img[0].naturalHeight);
+
+                $brick.removeClass('masonry__brick--square masonry__brick--portrait');
+                $brick.addClass('masonry__brick--' + expectedShape);
+
+                if (detectedShape && detectedShape !== expectedShape) {
+                    $brick.attr('data-shape-corrected', detectedShape + '-to-' + expectedShape);
+                } else {
+                    $brick.removeAttr('data-shape-corrected');
+                }
+            });
+        };
+
+        var layoutMasonry = function () {
+            if ($masonryInstance) {
+                $masonryInstance.masonry('layout');
+            }
+        };
 
         containerBricks.imagesLoaded(function () {
-            containerBricks.masonry({
+            applyPortfolioShapeSlots();
+
+            $masonryInstance = containerBricks.masonry({
                 itemSelector: '.masonry__brick',
+                columnWidth: '.grid-sizer',
+                percentPosition: true,
+                horizontalOrder: true,
                 resize: true
             });
+        });
+
+        $WIN.on('resize', function () {
+            layoutMasonry();
         });
     };
 

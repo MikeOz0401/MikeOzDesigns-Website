@@ -40,7 +40,7 @@
         "https://www.facebook.com/people/Mikeozdesigns"
     ],
     "jobTitle": "Architectural Designer",
-    "image": "https://www.mikeozdesigns.co.uk/images/aboutme/Website_Selfie.jpg"
+    "image": "https://www.mikeozdesigns.co.uk/images/aboutme/Website_Selfie.webp"
     }
     </script>
 
@@ -66,20 +66,24 @@
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- preload critical above-the-fold assets
+    ================================================== -->
+    <link rel="preload" href="fonts/librebaskerville/librebaskerville-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat/montserrat-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="images/Small-Hero-bg.webp" as="image">
+
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/BeforeAfter.css">
-    <link rel="stylesheet" href="css/test.css">
 
 
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
     <script src="js/pace.min.js"></script>
-    <script src="js/test.js"></script>
 
     <!-- favicons
     ================================================== -->
@@ -95,7 +99,7 @@
     <header class="s-header">
 
         <div class="header-logo">
-            <a class="site-logo" href="index.html"><img src="images/logo.png" alt="Homepage"></a>
+            <a class="site-logo" href="index.html"><img src="images/logo.webp" alt="Homepage"></a>
         </div>
 
         <nav class="header-nav-wrap">
@@ -116,7 +120,7 @@
 
    <!-- home
    ================================================== -->
-   <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/Small-Hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center alt="HeroBg">
+   <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/Small-Hero-bg.webp" data-natural-width=3000 data-natural-height=2000 data-position-y=center alt="HeroBg">
 
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
@@ -180,7 +184,7 @@
             </div>
             <div class="col-full text-center">
                 <div class="about-selfie">
-                    <img src="images/aboutme/Website_Selfie.jpg"
+                    <img src="images/aboutme/Website_Selfie.webp"
                         
                         alt="About Me Image">
                 </div>
@@ -345,8 +349,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="Project 14" class="thumb-link" data-modal="modal-LivingRoomRedev" title="LivingRoomRedev" data-size="1050x700">
-                                <img src="images/portfolio/Projects/Mama Living Room/Small Image.jpg" 
-                                     srcset="images/portfolio/Projects/Mama Living Room/Small Image.jpg 1x, images/portfolio/Projects/Mama Living Room/Small Image.jpg 2x" alt="">
+                                <img src="images/portfolio/Projects/Mama Living Room/Small Image.webp" alt="Living room re-design and refurbishment project">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -369,8 +372,8 @@
                                     Living room Refurbishment Project. 
                                 </p>
                                 <div class="before-after" data-before-after role="group" aria-label="Dining table before and after comparison">
-                                    <img src="images/portfolio/Projects/Mama Living Room/Dining Table - Remake.jpg" alt="Dining table after refurbishment" class="before-after__image before-after__image--after" loading="eager">
-                                    <img src="images/portfolio/Projects/Mama Living Room/Dining Table - Original.jpg" alt="Dining table before refurbishment" class="before-after__image before-after__image--before" loading="eager">
+                                    <img src="images/portfolio/Projects/Mama Living Room/Dining Table - Remake.webp" alt="Dining table after refurbishment" class="before-after__image before-after__image--after" loading="eager">
+                                    <img src="images/portfolio/Projects/Mama Living Room/Dining Table - Original.webp" alt="Dining table before refurbishment" class="before-after__image before-after__image--before" loading="eager">
                                     <span class="before-after__label before-after__label--before">Before</span>
                                     <span class="before-after__label before-after__label--after">After</span>
                                     <div class="before-after__divider" aria-hidden="true"></div>
@@ -384,8 +387,8 @@
                                 </div>
 
                                 <div class="before-after" data-before-after role="group" aria-label="Dining table before and after comparison">
-                                    <img src="images/portfolio/Projects/Mama Living Room/Living Room - Remake.jpg" alt="Living Room after refurbishment" class="before-after__image before-after__image--after" loading="eager">
-                                    <img src="images/portfolio/Projects/Mama Living Room/Living Room - Overlay.jpg" alt="Living Room before refurbishment" class="before-after__image before-after__image--before" loading="eager">
+                                    <img src="images/portfolio/Projects/Mama Living Room/Living Room - Remake.webp" alt="Living Room after refurbishment" class="before-after__image before-after__image--after" loading="eager">
+                                    <img src="images/portfolio/Projects/Mama Living Room/Living Room - Overlay.webp" alt="Living Room before refurbishment" class="before-after__image before-after__image--before" loading="eager">
                                     <span class="before-after__label before-after__label--before">Before</span>
                                     <span class="before-after__label before-after__label--after">After</span>
                                     <div class="before-after__divider" aria-hidden="true"></div>
@@ -398,8 +401,8 @@
                                     </div>
                                 </div>
 
-                                <img src="images/portfolio/Projects/Mama Living Room/Living_Add1.jpg" alt="LivingRoom_add1" loading="lazy">
-                                <img src="images/portfolio/Projects/Mama Living Room/Living_Add2.jpg" alt="LivingRoom_add1" loading="lazy"> 
+                                <img src="images/portfolio/Projects/Mama Living Room/Living_Add1.webp" alt="LivingRoom_add1" loading="lazy">
+                                <img src="images/portfolio/Projects/Mama Living Room/Living_Add2.webp" alt="LivingRoom_add1" loading="lazy"> 
                                 
                                 <!-- Add more content as needed -->
                             </div>
@@ -420,8 +423,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="Project 13" class="thumb-link" data-modal="modal-Brzezniak" title="Brzezniak" data-size="1050x700">
-                                <img src="images/portfolio/Projects/Brzezniak Lazienka/Big Image.jpg" 
-                                     srcset="images/portfolio/Projects/Brzezniak Lazienka/Big Image.jpg 1x, images/portfolio/Projects/Brzezniak Lazienka/Big Image.jpg 2x" alt="">
+                                <img src="images/portfolio/Projects/Brzezniak Lazienka/Big Image.webp" alt="Bathroom re-design refurbishment visualisation">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -446,10 +448,10 @@
                                     
                                 </p>
                                 
-                                <img src="images/portfolio/Projects/Brzezniak Lazienka/Bathroom-Remake.jpg" alt="BathroomBRZE-1" loading="lazy">
-                                <img src="images/portfolio/Projects/Brzezniak Lazienka/Perspektywa 2 - Noc.jpg" alt="BathroomBRZE-1" loading="lazy">
-                                <img src="images/portfolio/Projects/Brzezniak Lazienka/Perspektywa 2 - Ranek.jpg" alt="BathroomBRZE-2" loading="lazy">                                      
-                                <img src="images/portfolio/Projects/Brzezniak Lazienka/Prysznic - Ranek.jpg" alt="BathroomBRZE-3" loading="lazy">      
+                                <img src="images/portfolio/Projects/Brzezniak Lazienka/Bathroom-Remake.webp" alt="BathroomBRZE-1" loading="lazy">
+                                <img src="images/portfolio/Projects/Brzezniak Lazienka/Perspektywa 2 - Noc.webp" alt="BathroomBRZE-1" loading="lazy">
+                                <img src="images/portfolio/Projects/Brzezniak Lazienka/Perspektywa 2 - Ranek.webp" alt="BathroomBRZE-2" loading="lazy">                                      
+                                <img src="images/portfolio/Projects/Brzezniak Lazienka/Prysznic - Ranek.webp" alt="BathroomBRZE-3" loading="lazy">      
                                 
 
                                 <!-- Add more content as needed -->
@@ -470,8 +472,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="Burrell in the City" class="thumb-link" data-modal="modal-Burrell" title="Burrell" data-size="1050x700">
-                                <img src="images/portfolio/Projects/Burrell in the City/Small Image.jpg" 
-                                     srcset="images/portfolio/Projects/Burrell in the City/Small Image.jpg 1x, images/portfolio/Projects/Burrell in the City/Small Image.jpg 2x" alt="">
+                                <img src="images/portfolio/Projects/Burrell in the City/Small Image.webp" alt="Burrell in the City final-year architecture project">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -494,16 +495,16 @@
                                     My goal was to produce a comprehensive proposal that satisfied every structural and spatial requirement in the given brief. 
                                     To do so, I tackled the challenges of designing a multi-storey building in an urban setting, whilst developing a rich mix of spaces that could become new homes for several works from the Burrell Collection.
                                 </p>
-                                <img src="images/portfolio/Projects/Burrell in the City/Inspirations.jpg" alt="Burrell_Inspo" loading="lazy">
-                                <img src="images/portfolio/Projects/Burrell in the City/PerspectiveSection.jpg" alt="Burrell_Persp_Section" loading="lazy">
-                                <img src="images/portfolio/Projects/Burrell in the City/BuildingElevations.jpg" alt="Burrell_Build_Elev" loading="lazy">
-                                <img src="images/portfolio/Projects/Burrell in the City/Plans_BasementGF.jpg" alt="Burrell_Plan1" loading="lazy">
-                                <img src="images/portfolio/Projects/Burrell in the City/Plans_FFSF.jpg" alt="Burrell_Plan2" loading="lazy">
-                                <img src="images/portfolio/Projects/Burrell in the City/Plans_TFFF.jpg" alt="Burrell_Plan3" loading="lazy">
-                                <img src="images/portfolio/Projects/Burrell in the City/StructuralAxo_1.jpg" alt="Burrell_StrAxo1" loading="lazy">
-                                <img src="images/portfolio/Projects/Burrell in the City/StructuralAxo_2.jpg" alt="Burrell_StrAxo2" loading="lazy">
-                                <img src="images/portfolio/Projects/Burrell in the City/Visuals_1.jpg" alt="Burrell_Vis1" loading="lazy">
-                                <img src="images/portfolio/Projects/Burrell in the City/Visuals_2.jpg" alt="Burrell_Vis2" loading="lazy">
+                                <img src="images/portfolio/Projects/Burrell in the City/Inspirations.webp" alt="Burrell_Inspo" loading="lazy">
+                                <img src="images/portfolio/Projects/Burrell in the City/PerspectiveSection.webp" alt="Burrell_Persp_Section" loading="lazy">
+                                <img src="images/portfolio/Projects/Burrell in the City/BuildingElevations.webp" alt="Burrell_Build_Elev" loading="lazy">
+                                <img src="images/portfolio/Projects/Burrell in the City/Plans_BasementGF.webp" alt="Burrell_Plan1" loading="lazy">
+                                <img src="images/portfolio/Projects/Burrell in the City/Plans_FFSF.webp" alt="Burrell_Plan2" loading="lazy">
+                                <img src="images/portfolio/Projects/Burrell in the City/Plans_TFFF.webp" alt="Burrell_Plan3" loading="lazy">
+                                <img src="images/portfolio/Projects/Burrell in the City/StructuralAxo_1.webp" alt="Burrell_StrAxo1" loading="lazy">
+                                <img src="images/portfolio/Projects/Burrell in the City/StructuralAxo_2.webp" alt="Burrell_StrAxo2" loading="lazy">
+                                <img src="images/portfolio/Projects/Burrell in the City/Visuals_1.webp" alt="Burrell_Vis1" loading="lazy">
+                                <img src="images/portfolio/Projects/Burrell in the City/Visuals_2.webp" alt="Burrell_Vis2" loading="lazy">
                                 
                                 <!-- Add more content as needed -->
                             </div>
@@ -524,8 +525,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="Project 8" class="thumb-link" data-modal="modal-Cottage" title="Cottage" data-size="1050x700">
-                                <img src="images/portfolio/Projects/Cottage House/Big Image.jpg" 
-                                     srcset="images/portfolio/Projects/Cottage House/Big Image.jpg 1x, images/portfolio/Projects/Cottage House/Big Image.jpg 2x" alt="">
+                                <img src="images/portfolio/Projects/Cottage House/Big Image.webp" alt="Cottage House extension and home refurbishment">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -557,9 +557,9 @@
                                     <!-- Detailed information about the project -->
                                     
                                 </p>
-                                <img src="images/portfolio/Projects/Cottage House/3D_before_after.png" alt="CottageHouse_3Dba" loading="lazy">                                
-                                <img src="images/portfolio/Projects/Cottage House/GF_before_after.png" alt="CottageHouse_gfba" loading="lazy">
-                                <img src="images/portfolio/Projects/Cottage House/FF_before_after.png" alt="CottageHouse_ffba" loading="lazy">
+                                <img src="images/portfolio/Projects/Cottage House/3D_before_after.webp" alt="CottageHouse_3Dba" loading="lazy">                                
+                                <img src="images/portfolio/Projects/Cottage House/GF_before_after.webp" alt="CottageHouse_gfba" loading="lazy">
+                                <img src="images/portfolio/Projects/Cottage House/FF_before_after.webp" alt="CottageHouse_ffba" loading="lazy">
 
                                 <!-- Add more content as needed -->
                         
@@ -579,8 +579,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="Project 9" class="thumb-link" data-modal="modal-project-9">
-                                <img src="images/portfolio/Projects/Project 9 - Betjane/Small Image.jpeg" 
-                                     srcset="images/portfolio/Projects/Project 9 - Betjane/Small Image.jpeg 1x, images/portfolio/Projects/Project 9 - Betjane/Small Image.jpeg 2x" alt="">
+                                <img src="images/portfolio/Projects/Project 9 - Betjane/Small Image.webp" alt="Detached garage home extension proposal">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -607,9 +606,9 @@
                                 
                                 </p>
 
-                                    <img src="images/portfolio/Projects/Project 9 - Betjane/Garage - Front Elevation.jpeg" alt="Prj-9-1" loading="lazy">
-                                    <img src="images/portfolio/Projects/Project 9 - Betjane/Garage - Rear Elevation.jpeg" alt="Prj-9-2" loading="lazy">
-                                    <img src="images/portfolio/Projects/Project 9 - Betjane/Garage - Side Elevation.jpeg" alt="Prj-9-3" loading="lazy">
+                                    <img src="images/portfolio/Projects/Project 9 - Betjane/Garage - Front Elevation.webp" alt="Prj-9-1" loading="lazy">
+                                    <img src="images/portfolio/Projects/Project 9 - Betjane/Garage - Rear Elevation.webp" alt="Prj-9-2" loading="lazy">
+                                    <img src="images/portfolio/Projects/Project 9 - Betjane/Garage - Side Elevation.webp" alt="Prj-9-3" loading="lazy">
                                 
                                 
                         
@@ -636,8 +635,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="Project 11" class="thumb-link" data-modal="modal-Project11">
-                                <img src="images/portfolio/Projects/Project 11 - Sterno/Big Image.jpg" 
-                                     srcset="images/portfolio/Projects/Project 11 - Sterno/Big Image.jpg 1x, images/portfolio/Projects/Project 11 - Sterno/Big Image.jpg 2x" alt="">
+                                <img src="images/portfolio/Projects/Project 11 - Sterno/Big Image.webp" alt="Conservatory redesign into kitchen and dining area">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -659,13 +657,13 @@
 
                                 </p>
 
-                                    <img src="images/portfolio/Projects/Project 11 - Sterno/Curved_Roof/Exterior View 1.jpeg" alt="Prj-11-4" loading="lazy">
-                                    <img src="images/portfolio/Projects/Project 11 - Sterno/Curved_Roof/Exterior View 2.jpeg" alt="Prj-11-5" loading="lazy">
-                                    <img src="images/portfolio/Projects/Project 11 - Sterno/Curved_Roof/Dining Area 1.jpeg" alt="Prj-11-2" loading="lazy">
-                                    <img src="images/portfolio/Projects/Project 11 - Sterno/Curved_Roof/Dining Area 2.jpeg" alt="Prj-11-3" loading="lazy">
-                                    <img src="images/portfolio/Projects/Project 11 - Sterno/Curved_Roof/Kitchen Proposal 2.jpeg" alt="Prj-11-6" loading="lazy">
-                                    <img src="images/portfolio/Projects/Project 11 - Sterno/Curved_Roof/Kitchen Proposal 3.jpeg" alt="Prj-11-7" loading="lazy">
-                                    <img src="images/portfolio/Projects/Project 11 - Sterno/Curved_Roof/Kitchen Proposal 4.jpeg" alt="Prj-11-8" loading="lazy">
+                                    <img src="images/portfolio/Projects/Project 11 - Sterno/Curved_Roof/Exterior View 1.webp" alt="Prj-11-4" loading="lazy">
+                                    <img src="images/portfolio/Projects/Project 11 - Sterno/Curved_Roof/Exterior View 2.webp" alt="Prj-11-5" loading="lazy">
+                                    <img src="images/portfolio/Projects/Project 11 - Sterno/Curved_Roof/Dining Area 1.webp" alt="Prj-11-2" loading="lazy">
+                                    <img src="images/portfolio/Projects/Project 11 - Sterno/Curved_Roof/Dining Area 2.webp" alt="Prj-11-3" loading="lazy">
+                                    <img src="images/portfolio/Projects/Project 11 - Sterno/Curved_Roof/Kitchen Proposal 2.webp" alt="Prj-11-6" loading="lazy">
+                                    <img src="images/portfolio/Projects/Project 11 - Sterno/Curved_Roof/Kitchen Proposal 3.webp" alt="Prj-11-7" loading="lazy">
+                                    <img src="images/portfolio/Projects/Project 11 - Sterno/Curved_Roof/Kitchen Proposal 4.webp" alt="Prj-11-8" loading="lazy">
                                 
                                 
                             </div>
@@ -687,8 +685,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="Private Log Cabin" class="thumb-link" data-modal="modal-Private-Log-Cabin" title="Log-Cabin" data-size="1050x700">
-                                <img src="images/portfolio/Projects/Private Log Cabin/Big Image.jpg" 
-                                     srcset="images/portfolio/Projects/Private Log Cabin/Big Image.jpg 1x, images/portfolio/Projects/Private Log Cabin/Big Image.jpg 2x" alt="">
+                                <img src="images/portfolio/Projects/Private Log Cabin/Big Image.webp" alt="Private deluxe log cabin design">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -713,10 +710,10 @@
                                 
                                 </p>
 
-                                    <img src="images/portfolio/Projects/Private Log Cabin/INstagram Shot 2.jpg" alt="PLC_1" loading="lazy">
-                                    <img src="images/portfolio/Projects/Private Log Cabin/INstagram Shot 3.jpg" alt="PLC_2" loading="lazy">
-                                    <img src="images/portfolio/Projects/Private Log Cabin/Outside Render.jpeg" alt="PLC_3" loading="lazy">
-                                    <img src="images/portfolio/Projects/Private Log Cabin/Outside Yard 2.jpeg" alt="PLC_4" loading="lazy">
+                                    <img src="images/portfolio/Projects/Private Log Cabin/INstagram Shot 2.webp" alt="PLC_1" loading="lazy">
+                                    <img src="images/portfolio/Projects/Private Log Cabin/INstagram Shot 3.webp" alt="PLC_2" loading="lazy">
+                                    <img src="images/portfolio/Projects/Private Log Cabin/Outside Render.webp" alt="PLC_3" loading="lazy">
+                                    <img src="images/portfolio/Projects/Private Log Cabin/Outside Yard 2.webp" alt="PLC_4" loading="lazy">
                                 
                               
                         
@@ -734,8 +731,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="Cabin in the Woods" class="thumb-link" data-modal="modal-Cabin-OLDNEW" title="Cabin-OLDNEW" data-size="1050x700">
-                                <img src="images/portfolio/Projects/Cabin in the Woods/Big Image.jpg" 
-                                     srcset="images/portfolio/Projects/Cabin in the Woods/Big Image.jpg 1x, images/portfolio/Projects/Cabin in the Woods/Big Image.jpg 2x" alt="">
+                                <img src="images/portfolio/Projects/Cabin in the Woods/Big Image.webp" alt="Modernised old stone-and-wood cottage cabin design">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -760,8 +756,8 @@
                                 
                                 </p>
 
-                                    <img src="images/portfolio/Projects/Cabin in the Woods/Outside Shot 1.jpg" alt="Cabin_ON_1" loading="lazy">
-                                    <img src="images/Small-Hero-bg.jpg" alt="Cabin_ON_2">
+                                    <img src="images/portfolio/Projects/Cabin in the Woods/Outside Shot 1.webp" alt="Cabin_ON_1" loading="lazy">
+                                    <img src="images/Small-Hero-bg.webp" alt="Cabin_ON_2">
                                 
                                 
 
@@ -781,8 +777,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="Adjoined Housing" class="thumb-link" data-modal="modal-Adjoined-House" title="Cottage" data-size="1050x700">
-                                <img src="images/portfolio/Projects/PLOT/Small Image.jpg" 
-                                     srcset="images/portfolio/Projects/PLOT/Small Image.jpg 1x, images/portfolio/Projects/PLOT/Small Image.jpg 2x" alt="">
+                                <img src="images/portfolio/Projects/PLOT/Small Image.webp" alt="Adjoined housing university collaboration project">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -808,25 +803,25 @@
 
                                 </p>
 
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 1.jpeg" alt="Adjoined_1" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 2.jpeg" alt="Adjoined_2" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 3.jpeg" alt="Adjoined_3" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 4.jpeg" alt="Adjoined_4" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 5.jpeg" alt="Adjoined_5" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 6.jpeg" alt="Adjoined_6" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 7.jpeg" alt="Adjoined_7" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 8.jpeg" alt="Adjoined_8" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 9.jpeg" alt="Adjoined_9" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 10.jpeg" alt="Adjoined_10" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 11.jpeg" alt="Adjoined_11" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 12.jpeg" alt="Adjoined_12" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 13.jpeg" alt="Adjoined_13" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 14.jpeg" alt="Adjoined_14" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 15.jpeg" alt="Adjoined_15" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 16.jpeg" alt="Adjoined_16" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 17.jpeg" alt="Adjoined_17" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 18.jpeg" alt="Adjoined_18" loading="lazy">
-                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 19.jpeg" alt="Adjoined_19" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 1.webp" alt="Adjoined_1" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 2.webp" alt="Adjoined_2" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 3.webp" alt="Adjoined_3" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 4.webp" alt="Adjoined_4" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 5.webp" alt="Adjoined_5" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 6.webp" alt="Adjoined_6" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 7.webp" alt="Adjoined_7" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 8.webp" alt="Adjoined_8" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 9.webp" alt="Adjoined_9" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 10.webp" alt="Adjoined_10" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 11.webp" alt="Adjoined_11" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 12.webp" alt="Adjoined_12" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 13.webp" alt="Adjoined_13" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 14.webp" alt="Adjoined_14" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 15.webp" alt="Adjoined_15" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 16.webp" alt="Adjoined_16" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 17.webp" alt="Adjoined_17" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 18.webp" alt="Adjoined_18" loading="lazy">
+                                    <img src="images/portfolio/Projects/PLOT/Charlie Joint conv 19.webp" alt="Adjoined_19" loading="lazy">
     
 
 
@@ -853,8 +848,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="Home in the Mountains" class="thumb-link" data-modal="modal-House-Mountains">
-                                <img src="images/portfolio/Projects/House in the Mountains/Small Image.jpg" 
-                                     srcset="images/portfolio/Projects/House in the Mountains/Small Image.jpg 1x, images/portfolio/Projects/House in the Mountains/Small Image.jpg 2x" alt="">
+                                <img src="images/portfolio/Projects/House in the Mountains/Small Image.webp" alt="House in the mountains concept design">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -893,8 +887,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="Project 10" class="thumb-link" data-modal="modal-Project-10">
-                                <img src="images/portfolio/Projects/Project 10 - Russell House/Small Image.jpg" 
-                                     srcset="images/portfolio/Projects/Project 10 - Russell House/Small Image.jpg 1x, images/portfolio/Projects/Project 10 - Russell House/Small Image.jpg 2x" alt="">
+                                <img src="images/portfolio/Projects/Project 10 - Russell House/Small Image.webp" alt="Victorian house open-plan redesign">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -915,16 +908,16 @@
 
                                 </p>
                                 
-                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1_1 - Photo.jpeg" alt="Prj-10-1" loading="lazy">
-                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1_2 - Photo.jpeg" alt="Prj-10-2" loading="lazy">
-                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1_3 - Photo.jpeg" alt="Prj-10-3" loading="lazy">
-                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1_4 - Photo.jpeg" alt="Prj-10-4" loading="lazy">
-                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1_5 - Photo.jpeg" alt="Prj-10-5" loading="lazy">
-                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1_6 - Photo.jpeg" alt="Prj-10-6" loading="lazy">
-                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1_7 - Photo.jpeg" alt="Prj-10-7" loading="lazy">
-                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1 - Bath_1 - Photo.jpeg" alt="Prj-10-8" loading="lazy">
-                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1 - Bath_2 - Photo.jpeg" alt="Prj-10-9" loading="lazy">
-                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1 - Bath_3 - Photo.jpeg" alt="Prj-10-10" loading="lazy">
+                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1_1 - Photo.webp" alt="Prj-10-1" loading="lazy">
+                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1_2 - Photo.webp" alt="Prj-10-2" loading="lazy">
+                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1_3 - Photo.webp" alt="Prj-10-3" loading="lazy">
+                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1_4 - Photo.webp" alt="Prj-10-4" loading="lazy">
+                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1_5 - Photo.webp" alt="Prj-10-5" loading="lazy">
+                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1_6 - Photo.webp" alt="Prj-10-6" loading="lazy">
+                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1_7 - Photo.webp" alt="Prj-10-7" loading="lazy">
+                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1 - Bath_1 - Photo.webp" alt="Prj-10-8" loading="lazy">
+                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1 - Bath_2 - Photo.webp" alt="Prj-10-9" loading="lazy">
+                                <img src="images/portfolio/Projects/Project 10 - Russell House/Concept 1 - Bath_3 - Photo.webp" alt="Prj-10-10" loading="lazy">
 
                         
                             </div>
@@ -945,8 +938,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="Bo'Ness Library" class="thumb-link" data-modal="modal-BoNess">
-                                <img src="images/portfolio/Projects/BoNess/Big Image.jpeg" 
-                                     srcset="images/portfolio/Projects/BoNess/Big Image.jpeg 1x, images/portfolio/Projects/BoNess/Big Image.jpeg 2x" alt="">
+                                <img src="images/portfolio/Projects/BoNess/Big Image.webp" alt="Bo'Ness Library redesign university project">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -969,21 +961,21 @@
                                     
                                 </p>
 
-                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 1.jpeg" alt="BoNess_1" loading="lazy">
-                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 2.jpeg" alt="BoNess_2" loading="lazy">
-                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 3.jpeg" alt="BoNess_3" loading="lazy">
-                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 4.jpeg" alt="BoNess_4" loading="lazy">
-                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 5.jpeg" alt="BoNess_5" loading="lazy">
-                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 6.jpeg" alt="BoNess_6" loading="lazy">
-                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 7.jpeg" alt="BoNess_7" loading="lazy">
-                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 8.jpeg" alt="BoNess_8" loading="lazy">
-                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 9.jpeg" alt="BoNess_9" loading="lazy">
-                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 10.jpeg" alt="BoNess_10" loading="lazy">
-                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 11.jpeg" alt="BoNess_11" loading="lazy">
-                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 12.jpeg" alt="BoNess_12" loading="lazy">
-                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 13.jpeg" alt="BoNess_13" loading="lazy">
-                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 14.jpeg" alt="BoNess_14" loading="lazy">
-                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 15.jpeg" alt="BoNess_15" loading="lazy">
+                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 1.webp" alt="BoNess_1" loading="lazy">
+                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 2.webp" alt="BoNess_2" loading="lazy">
+                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 3.webp" alt="BoNess_3" loading="lazy">
+                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 4.webp" alt="BoNess_4" loading="lazy">
+                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 5.webp" alt="BoNess_5" loading="lazy">
+                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 6.webp" alt="BoNess_6" loading="lazy">
+                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 7.webp" alt="BoNess_7" loading="lazy">
+                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 8.webp" alt="BoNess_8" loading="lazy">
+                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 9.webp" alt="BoNess_9" loading="lazy">
+                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 10.webp" alt="BoNess_10" loading="lazy">
+                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 11.webp" alt="BoNess_11" loading="lazy">
+                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 12.webp" alt="BoNess_12" loading="lazy">
+                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 13.webp" alt="BoNess_13" loading="lazy">
+                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 14.webp" alt="BoNess_14" loading="lazy">
+                                    <img src="images/portfolio/Projects/BoNess/Boness Edited conv 15.webp" alt="BoNess_15" loading="lazy">
 
                                 
                         
@@ -1004,8 +996,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="Room Alterations" class="thumb-link" data-modal="modal-Room-Alterations">
-                                <img src="images/portfolio/Projects/Small_Room/Small Image.jpg" 
-                                     srcset="images/portfolio/Projects/Small_Room/Small Image.jpg 1x, images/portfolio/Projects/Small_Room/Small Image.jpg 2x" alt="">
+                                <img src="images/portfolio/Projects/Small_Room/Small Image.webp" alt="Bedroom layout alteration side project">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -1026,8 +1017,8 @@
 
                                 </p>
                                 
-                                <img src="images/portfolio/Projects/Small_Room/Photo 1.jpg" alt="RoomAlt_1" loading="lazy">
-                                <img src="images/portfolio/Projects/Small_Room/Photo 2.jpg" alt="RoomAlt_2" loading="lazy">
+                                <img src="images/portfolio/Projects/Small_Room/Photo 1.webp" alt="RoomAlt_1" loading="lazy">
+                                <img src="images/portfolio/Projects/Small_Room/Photo 2.webp" alt="RoomAlt_2" loading="lazy">
                         
                             </div>
                         </div>
@@ -1044,8 +1035,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="Small House in the Woods" class="thumb-link" data-modal="modal-WoodHouse">
-                                <img src="images/portfolio/Projects/Project 2 - Small house/Big Image.jpg" 
-                                     srcset="images/portfolio/Projects/Project 2 - Small house/Big Image.jpg 1x, images/portfolio/Projects/Project 2 - Small house/Big Image.jpg 2x" alt="">
+                                <img src="images/portfolio/Projects/Project 2 - Small house/Big Image.webp" alt="Small house in the woods design">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -1091,8 +1081,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="Modern House" class="thumb-link" data-modal="modal-Modern-House">
-                                <img src="images/portfolio/Projects/Project 4 - Modern House/Big Image.jpg" 
-                                        srcset="images/portfolio/Projects/Project 4 - Modern House/Big Image.jpg 1x, images/portfolio/Projects/Project 4 - Modern House/Big Image.jpg 2x" alt="">
+                                <img src="images/portfolio/Projects/Project 4 - Modern House/Big Image.webp" alt="Modern house architectural design">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -1139,8 +1128,7 @@
                 
                         <div class="item-folio__thumb">
                             <a href="SLOT University Project" class="thumb-link" data-modal="modal-UNI-SLOT">
-                                <img src="images/portfolio/Projects/SLOT/Big Image.jpeg" 
-                                     srcset="images/portfolio/Projects/SLOT/Big Image.jpeg 1x, images/portfolio/Projects/SLOT/Big Image.jpeg 2x" alt="">
+                                <img src="images/portfolio/Projects/SLOT/Big Image.webp" alt="Art design studio and apartments university project">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -1162,26 +1150,26 @@
 
                                 </p>
 
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 1.jpeg" alt="SLOT-1" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 2.jpeg" alt="SLOT-2" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 3.jpeg" alt="SLOT-3" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 4.jpeg" alt="SLOT-4" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 5.jpeg" alt="SLOT-5" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 6.jpeg" alt="SLOT-6" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 7.jpeg" alt="SLOT-7" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 8.jpeg" alt="SLOT-8" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 9.jpeg" alt="SLOT-9" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 10.jpeg" alt="SLOT-10" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 11.jpeg" alt="SLOT-11" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 12.jpeg" alt="SLOT-12" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 13.jpeg" alt="SLOT-13" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 14.jpeg" alt="SLOT-14" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 15.jpeg" alt="SLOT-15" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 16.jpeg" alt="SLOT-16" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 17.jpeg" alt="SLOT-17" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 18.jpeg" alt="SLOT-18" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 19.jpeg" alt="SLOT-19" loading="lazy">
-                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 20.jpeg" alt="SLOT-20" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 1.webp" alt="SLOT-1" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 2.webp" alt="SLOT-2" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 3.webp" alt="SLOT-3" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 4.webp" alt="SLOT-4" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 5.webp" alt="SLOT-5" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 6.webp" alt="SLOT-6" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 7.webp" alt="SLOT-7" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 8.webp" alt="SLOT-8" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 9.webp" alt="SLOT-9" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 10.webp" alt="SLOT-10" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 11.webp" alt="SLOT-11" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 12.webp" alt="SLOT-12" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 13.webp" alt="SLOT-13" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 14.webp" alt="SLOT-14" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 15.webp" alt="SLOT-15" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 16.webp" alt="SLOT-16" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 17.webp" alt="SLOT-17" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 18.webp" alt="SLOT-18" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 19.webp" alt="SLOT-19" loading="lazy">
+                                <img src="images/portfolio/Projects/SLOT/SLOT Part conv 20.webp" alt="SLOT-20" loading="lazy">
                                 
                                 
                                 <!-- Add more content as needed -->
@@ -1257,7 +1245,7 @@
                 
                 <div class="service-slide">
                     <div class="service-icon">
-                        <img src="images/Icons/Planning.png" alt="Consulting Services">
+                        <img src="images/Icons/Planning.webp" alt="Consulting Services">
                     </div>
                     <h2 class="service-title">Conceptual & Developed Design | Planning Permission</h2>
                     <p class="service-description">
@@ -1276,7 +1264,7 @@
                 <!-- Slide 2 Building Warrant-->
                 <div class="service-slide">
                     <div class="service-icon">
-                        <img src="images/Icons/BuildingWarrant.png" alt="Planning Permission">
+                        <img src="images/Icons/BuildingWarrant.webp" alt="Planning Permission">
                     </div>
                     <h2 class="service-title">Structural Design | Building Warrant</h2>
                     <p class="service-description">
@@ -1295,7 +1283,7 @@
                 <!-- Slide 3 Small Home Renovations-->
                 <div class="service-slide">
                     <div class="service-icon">
-                        <img src="images/Icons/Drafting.png" alt="Building Warrant">
+                        <img src="images/Icons/Drafting.webp" alt="Building Warrant">
                     </div>
                     <h2 class="service-title">Permitted Development | No Warrants Necessary</h2>
                     <p class="service-description">
@@ -1344,7 +1332,7 @@
             <div class="promise-item">
                 <div class="promise-icon">
                     <!-- Replace with your icon image -->
-                    <img src="images/Icons/CustomDesign.png" alt="Promise 1">
+                    <img src="images/Icons/CustomDesign.webp" alt="Promise 1">
                 </div>
                 <p><b>Bespoke Designs, Tailored to You</b></p>
                 <p class="service-description">
@@ -1357,7 +1345,7 @@
             <!-- High Quality Outputs -->
             <div class="promise-item">
                 <div class="promise-icon">
-                    <img src="images/Icons/HighQuality.png" alt="Promise 2">
+                    <img src="images/Icons/HighQuality.webp" alt="Promise 2">
                 </div>
                 <p><b>High Quality Project Outputs</b></p>
                 <p class="service-description">
@@ -1370,7 +1358,7 @@
             <!-- Budget and Time -->
             <div class="promise-item">
                 <div class="promise-icon">
-                    <img src="images/Icons/On-TimeBudget.png" alt="Promise 3">
+                    <img src="images/Icons/On-TimeBudget.webp" alt="Promise 3">
                 </div>
                 <p><b>On-Time and Within Budget</b></p>
                 <p class="service-description">
@@ -1409,7 +1397,7 @@
 
                     <!-- Testimonial 1-->
                     <div class="testimonials__slide">
-                        <img src="images/Testimonials/project10-H-A.jpg" alt="Author image" class="testimonials__avatar">
+                        <img src="images/Testimonials/project10-H-A.webp" alt="Author image" class="testimonials__avatar">
   
                         <p>
                             The renovation of our 1805 cottage (mostly rebuilt in 1973) had layout problems that we just couldn’t resolve – cramped headroom upstairs and a staircase running through the middle of the house. 
@@ -1427,7 +1415,7 @@
                     
                     <!-- Testimonial 2-->
                     <div class="testimonials__slide">
-                        <img src="images/Testimonials/Project11_O-I.jpg" alt="Author image" class="testimonials__avatar">
+                        <img src="images/Testimonials/Project11_O-I.webp" alt="Author image" class="testimonials__avatar">
                         <p>
                             Mr. Ozarek is a professional in his field. He listens to the client during the planning process and subtly advises changes or proposes new solutions that we had no idea about and that improved our project. 
                             Every stage of working with Mr. Ozarek was pure pleasure. Attention to detail and reliability are definitely features worth recommending.
@@ -1440,7 +1428,7 @@
 
                     <!-- Testimonial 3
                     <div class="testimonials__slide">
-                        <img src="images/Testimonials/user-03.jpg" alt="Author image" class="testimonials__avatar">
+                        <img src="images/Testimonials/user-03.webp" alt="Author image" class="testimonials__avatar">
                         <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
                         Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.</p>
                         <div class="testimonials__author h06">
@@ -1632,13 +1620,13 @@
                 <!-- contact-warning -->
                 <div class="message-warning">
                     Something went wrong. Please try again.
-                    <img src="images/Icons/Cross Icon.png" alt="msg-notok-icon" class="msg-icon icon-white">
+                    <img src="images/Icons/Cross Icon.webp" alt="msg-notok-icon" class="msg-icon icon-white">
                 </div> 
             
                 <!-- contact-success -->
                 <div class="message-success">
                     Your message was sent, thank you!
-                    <img src="images/Icons/Tick Icon.png" alt="msg-ok-icon" class="msg-icon icon-white">
+                    <img src="images/Icons/Tick Icon.webp" alt="msg-ok-icon" class="msg-icon icon-white">
                 </div>
                         
             </div>
@@ -1673,7 +1661,7 @@
             <div class="col-full">
 
                 <div class="footer-logo">
-                    <a class="footer-site-logo" href="#0"><img src="images/logo.png" alt="Homepage"></a>
+                    <a class="footer-site-logo" href="#0"><img src="images/logo.webp" alt="Homepage"></a>
                 </div>
 
                 <ul class="footer-social">

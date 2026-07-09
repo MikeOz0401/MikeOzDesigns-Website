@@ -3,7 +3,6 @@
 .before-after {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 4px;
   user-select: none;
@@ -11,18 +10,45 @@
   --position: 50%;
 }
 
+/* The "after" image sits in normal flow, so its natural aspect ratio
+   drives the height of the whole widget. This lets the slider work with
+   any image size (portrait, landscape, square) without stretching, as
+   long as the before/after pair share the same dimensions. */
 .before-after__image {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   object-position: center;
 }
 
+/* The "before" image is layered on top and clipped. It fills the box
+   defined by the "after" image so the two stay pixel-aligned. */
 .before-after__image--before {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   clip-path: inset(0 calc(100% - var(--position)) 0 0);
+}
+
+/* Each label sits inside a full-size layer that is clipped by the same
+   --position as the divider. The "before" layer is revealed on the left
+   of the divider and the "after" layer on the right, so as the divider
+   slides across a label it wipes that label away. */
+.before-after__labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.before-after__labels--before {
+  clip-path: inset(0 calc(100% - var(--position)) 0 0);
+}
+
+.before-after__labels--after {
+  clip-path: inset(0 0 0 var(--position));
 }
 
 .before-after__label {
@@ -37,7 +63,6 @@
   background: rgba(0, 0, 0, 0.55);
   border-radius: 3px;
   pointer-events: none;
-  z-index: 2;
 }
 
 .before-after__label--before {
@@ -107,8 +132,13 @@
 
 .modal-content .before-after__image {
   max-width: none;
-  height: 100%;
   border: none;
+}
+
+/* Keep the layered "before" image full-height inside the modal, where the
+   global `.modal-content img` rule would otherwise reset it to auto. */
+.modal-content .before-after__image--before {
+  height: 100%;
 }
 
 @media only screen and (max-width: 800px) {
